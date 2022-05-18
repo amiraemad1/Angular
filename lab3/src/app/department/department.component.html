@@ -1,0 +1,25 @@
+<p>department works!</p>
+<div> {{dept.id}}:{{dept.name}}:{{dept.location}} </div>
+<div>
+    <table class="table table-bordered table-hover">
+        <thead>
+           <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>Location</th>
+
+           </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of depts">
+                <td>{{d.id}}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.location}}</td>
+               <td> <button class="btn btn-info" (click)="show(d.id)">Details</button> </td>
+               <td> <button class="btn btn-info" (click)="edit(d.id)">Edit</button> </td>
+               <td> <button class="btn btn-info" (click)="delet(d.id)">Delete</button> </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
